@@ -1,0 +1,25 @@
+{
+    "activity":"Contact Us form fill",
+    "attachments":[
+        {
+            "fields":[
+                {
+                    "title":"Name",
+                    "value":"Jane Doe"
+                },
+                {
+                    "title":"Email",
+                    "value":"jane.doe@example.com"
+                },
+                {
+                    "title":"Company",
+                    "value":"Example.com"
+                },
+                {
+                    "title":"Message",
+                    "value":"Hello, I'm looking to speak to someone about buying your product."
+                }
+            ]
+        }
+    ]
+}

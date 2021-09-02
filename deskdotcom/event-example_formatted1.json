@@ -1,0 +1,14 @@
+{
+    "activity":"Case updated",
+    "title":"[Help Please!](https://example.desk.com/agent/case/1)",
+    "attachments":[
+        {
+            "fields":[
+                {
+                    "title":"Case Type",
+                    "value":"new email"
+                }
+            ]
+        }
+    ]
+}

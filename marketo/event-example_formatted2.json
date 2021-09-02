@@ -1,0 +1,25 @@
+{
+    "activity":"New lead visit",
+    "attachments":[
+        {
+            "fields":[
+                {
+                    "title":"Name",
+                    "value":"Jane Doe"
+                },
+                {
+                    "title":"Email",
+                    "value":"jane.doe@example.com"
+                },
+                {
+                    "title":"Company",
+                    "value":"Example.com"
+                },
+                {
+                    "title":"Visited URL",
+                    "value":"https://example.com/integrating-glip-with-marketo"
+                }
+            ]
+        }
+    ]
+}

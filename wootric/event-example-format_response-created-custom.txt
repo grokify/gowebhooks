@@ -1,0 +1,97 @@
+inputType=wootric&adapterType=glip=url=https%3A%2F%2Fhooks.glip.com%2Fwebhook%2F982243d3-8fdf-4d3d-aebf-fc117e8ce351&wootricFormatResponse=score%5BNPS%20Score%5D%2Ctext%5BWhy%5D%3Bemail%5BUser%20email%5D%3Bcompany_name__c%5BCompany%20Name%5D%3Bsurvey_id%5BSurvey%20ID%5D
+
+curl -XPOST 
+
+score[NPS Score],text[Why];email[User email];pricing_plan__c[Pricing Plan];product_plan__c[Product Plan];survey_id[Survey ID]
+
+curl -XPOST 'http://localhost:3000/hook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&wootricFormatResponse=score%5BNPS%20Score%5D%2Ctext%5BWhy%5D%3Bemail%5BUser%20email%5D%3B_pricing_plan%5BPricing%20Plan%5D%3B_product_plan%5BProduct%20Plan%5D%3Bsurvey_id%5BSurvey%20ID%5D' --data-urlencode "@event-example_response-created-custom.txt"
+
+
+curl -XPOST 'https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&wootricFormatResponse=score%5BNPS%20Score%5D%2Ctext%5BWhy%5D%3Bemail%5BUser%20email%5D%3B_pricing_plan%5BPricing%20Plan%5D%3B_product_plan%5BProduct%20Plan%5D%3Bsurvey_id%5BSurvey%20ID%5D' --data-urlencode "@event-example_response-created-custom.txt"
+
+
+curl -XPOST 'https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=datadog&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5' --data "@docs/handlers/datadog/event-example_formatted1.json" -H 'Content-Type: application/json' --verbose
+
+
+curl -XPOST 'https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=heroku&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5' --data "@docs/handlers/heroku/event-example_build.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+
+https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?
+
+inputType=
+
+
+--data-urlencode
+
+
+application/x-www-form-urlencoded
+
+	WootricResponseFormat = `score[Score],text[Why];company_name__c[Company Name],(rcAccountId__c[RC Account ID]);email[User email];directorySize__c[Number of users];brand[Brand];survey_id[Survey ID]` // score[Score],text(Why);company_name__c(Company Name),(rcAccountId__c[RC Account ID]);email[User email];directorySize[Number of users];brand[Brand];survey_id[Survey ID]
+
+WOOTRIC RC
+
+curl -XPOST 'http://localhost:3000/webhook?inputType=datadog&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5' --data "@docs/handlers/datadog/event-example_formatted1.json" -H 'Content-Type: application/json' --verbose
+
+curl -XPOST 'http://localhost:3000/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3B_company_name%5BCompany%20Name%5D%2C_rcAccountId%5BRC%20Account%20ID%5D%3Bemail%5BUser%20Email%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+curl -XPOST 'https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3B_company_name%5BCompany%20Name%5D%2C_rcAccountId%5BRC%20Account%20ID%5D%3Bemail%5BUser%20Email%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+curl -XPOST 'https://uwig4fb53k.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3B_company_name%5BCompany%20Name%5D%2C_rcAccountId%5BRC%20Account%20ID%5D%3Bemail%5BUser%20Email%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+
+ https://uwig4fb53k.execute-api.eu-west-3.amazonaws.com/prod
+
+
+curl -XPOST 'https://03pe161wla.execute-api.eu-west-3.amazonaws.com/prod/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=EngageDigital-EYeXNWvBS7gHACfVW73YPmr8zAVmgEB5&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3B_company_name%5BCompany%20Name%5D%2C_rcAccountId%5BRC%20Account%20ID%5D%3Bemail%5BUser%20Email%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+
+
+curl -XPOST 'https://chathooks-wootric.herokuapp.com/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/4be4fa53-3b49-4af8-822f-7a4b7172a70c&token=npsscore&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3Bemail%5BUser%20Email%5D%2C_company_name%5BCompany%20Name%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+
+curl -XPOST 'https://chathooks-wootric.herokuapp.com/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=npsscore&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3Bemail%5BUser%20Email%5D%2C_company_name%5BCompany%20Name%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D&wootricSkipEmptyText=1' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+982243d3-8fdf-4d3d-aebf-fc117e8ce351
+
+https://hooks.glip.com/webhook/4be4fa53-3b49-4af8-822f-7a4b7172a70c
+
+curl -XPOST 'http://localhost:3000/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/982243d3-8fdf-4d3d-aebf-fc117e8ce351&token=npsscore&wootricFormatResponse=score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3Bemail%5BUser%20Email%5D%2C_company_name%5BCompany%20Name%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D&wootricSkipEmptyText=1' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
+
+
+score[NPS Score],_company_brand[Brand];text[Why];_company_name[Company Name],_rcAccountId[RC Account ID];email[User Email];_directorySize[Number of Users],survey_id[Survey ID]
+
+
+score%5BNPS%20Score%5D%2C_company_brand%5BBrand%5D%3Btext%5BWhy%5D%3B_company_name%5BCompany%20Name%5D%2C_rcAccountId%5BRC%20Account%20ID%5D%3Bemail%5BUser%20Email%5D%3B_directorySize%5BNumber%20of%20Users%5D%2Csurvey_id%5BSurvey%20ID%5D
+
+
+---
+
+
+
+
+<score|NPS Score>
+
+[NPS Score](score)
+
+{score|NPS Score}
+{_company_name|Company Name} ({rcAccountId|RC Account ID})
+text[Why]
+directorySize[Number of Users]
+
+score[NPS Score]
+text[Why]
+_company_name[Company Name]
+_rcAccountId[RC Account ID]
+email[User Email]
+_directorySize[Number of Users]
+_company_brand[Brand]
+survey_id[Survey ID]
+
+
+score[NPS Score],_company_brand[Brand];text[Why];_company_name[Company Name],_rcAccountId[RC Account ID];email[User Email];_directorySize[Number of Users],survey_id[Survey ID]
+
+
+---
+
+
+curl -XPOST 'https://{myid}.execute-api.{myregion}.amazonaws.com/prod/webhook?inputType=wootric&outputType=glip&url=https://hooks.glip.com/webhook/11112222-3333-4444-5555-666677778888' --data "@docs/handlers/wootric/_event-example_response-created.txt" -H 'Content-Type: application/x-www-form-urlencoded' --verbose
