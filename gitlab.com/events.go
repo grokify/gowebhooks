@@ -7,12 +7,14 @@ import (
 )
 
 const (
-	DomainName = "gitlab.com"
-	EventSlugs = "comment-on-commit,comment-onissue,comment-on-merge-request,issue,merge-request,push,release,tag-push"
+	ServiceSlug = "gitlab"
+	DomainName  = "gitlab.com"
+	EventSlugs  = "comment-on-commit,comment-onissue,comment-on-merge-request,issue,merge-request,push,release,tag-push"
 )
 
 func NewEvents() webhooks.Events {
 	return webhooks.NewEvents(
+		ServiceSlug,
 		DomainName,
 		strings.Split(EventSlugs, ","))
 }
