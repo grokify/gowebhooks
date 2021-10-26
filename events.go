@@ -1,4 +1,4 @@
-package webhooks
+package gowebhooks
 
 type Events struct {
 	serviceSlugStr string

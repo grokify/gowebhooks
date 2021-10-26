@@ -3,7 +3,7 @@ package gitlab
 import (
 	"strings"
 
-	webhooks "github.com/grokify/webhook-directory"
+	"github.com/grokify/gowebhooks"
 )
 
 const (
@@ -12,8 +12,8 @@ const (
 	EventSlugs  = "comment-on-commit,comment-onissue,comment-on-merge-request,issue,merge-request,push,release,tag-push"
 )
 
-func NewEvents() webhooks.Events {
-	return webhooks.NewEvents(
+func NewEvents() gowebhooks.Events {
+	return gowebhooks.NewEvents(
 		ServiceSlug,
 		DomainName,
 		strings.Split(EventSlugs, ","))

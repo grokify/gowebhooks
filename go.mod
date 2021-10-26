@@ -1,3 +1,3 @@
-module github.com/grokify/webhook-directory
+module github.com/grokify/gowebhooks
 
 go 1.16
