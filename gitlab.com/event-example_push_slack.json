@@ -1,0 +1,11 @@
+{
+  "username":"",
+  "fallback":"John Wang pushed to branch \u003chttps://gitlab.com/grokify/example-project/commits/main|main\u003e of \u003chttps://gitlab.com/grokify/example-project|John Wang / Example Project\u003e (\u003chttps://gitlab.com/grokify/example-project/compare/90c523f219e3d41b098c74678ecc50ac581428b6...8b2c5d00884b08d12a9d8f97e3ce81de30d78b8b|Compare changes\u003e)",
+  "text":"John Wang pushed to branch \u003chttps://gitlab.com/grokify/example-project/commits/main|main\u003e of \u003chttps://gitlab.com/grokify/example-project|John Wang / Example Project\u003e (\u003chttps://gitlab.com/grokify/example-project/compare/90c523f219e3d41b098c74678ecc50ac581428b6...8b2c5d00884b08d12a9d8f97e3ce81de30d78b8b|Compare changes\u003e)",
+  "attachments":[
+    {
+      "text":"\u003chttps://gitlab.com/grokify/example-project/-/commit/8b2c5d00884b08d12a9d8f97e3ce81de30d78b8b|8b2c5d00\u003e: Add LICENSE - John Wang",
+      "color":"#345"
+    }
+  ]
+}
