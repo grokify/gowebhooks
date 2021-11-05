@@ -1,6 +1,7 @@
 package gitlab
 
 import (
+	"embed"
 	"strings"
 
 	"github.com/grokify/gowebhooks"
@@ -17,4 +18,13 @@ func NewEvents() gowebhooks.Events {
 		ServiceSlug,
 		DomainName,
 		strings.Split(EventSlugs, ","))
+}
+
+//go:embed event-example_push_slack.json
+//go:embed event-example_push_slack.txt
+var f embed.FS
+
+// ReadExampleFile reads an embedded example file.
+func ReadExampleFile(filename string) ([]byte, error) {
+	return f.ReadFile(filename)
 }
